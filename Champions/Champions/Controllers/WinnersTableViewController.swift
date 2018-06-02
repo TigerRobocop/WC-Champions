@@ -25,7 +25,7 @@ class WinnersTableViewController: UITableViewController {
             worldCups = try JSONDecoder().decode([WorldCup].self, from: jsonData)
         } catch  {
             print(error.localizedDescription)
-        }      
+        }
     }
 
     // MARK: - Table view data source
@@ -37,7 +37,10 @@ class WinnersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "winner_cell", for: indexPath)
         
-        // Configure the cell...
+        let worldCup = worldCups[indexPath.row]
+        cell.textLabel?.text = "Copa \(worldCup.year) - \(worldCup.country)"
+        cell.detailTextLabel?.text = "\(worldCup.winner) \(worldCup.winnerScore) x \(worldCup.viceScore) \(worldCup.vice)"
+        cell.imageView?.image = UIImage(named: worldCup.winner)
         
         return cell
     }
