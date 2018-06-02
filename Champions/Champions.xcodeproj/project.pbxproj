@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5727959720C2CD1400E50BC0 /* WorldCupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727959620C2CD1400E50BC0 /* WorldCupTableViewCell.swift */; };
+		5727959920C2E39200E50BC0 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727959820C2E39200E50BC0 /* GamesTableViewCell.swift */; };
 		5769811C20C1FF2C008FC1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769811B20C1FF2C008FC1FC /* AppDelegate.swift */; };
 		5769812120C1FF2C008FC1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5769811F20C1FF2C008FC1FC /* Main.storyboard */; };
 		5769812320C1FF2D008FC1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5769812220C1FF2D008FC1FC /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5727959620C2CD1400E50BC0 /* WorldCupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupTableViewCell.swift; sourceTree = "<group>"; };
+		5727959820C2E39200E50BC0 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		5769811820C1FF2C008FC1FC /* Champions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Champions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5769811B20C1FF2C008FC1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5769812020C1FF2C008FC1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5727959A20C2E39B00E50BC0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5727959620C2CD1400E50BC0 /* WorldCupTableViewCell.swift */,
+				5727959820C2E39200E50BC0 /* GamesTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		5769810F20C1FF2C008FC1FC = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 			children = (
 				5769813320C20A44008FC1FC /* WinnersTableViewController.swift */,
 				5769813520C20BAB008FC1FC /* WorldCupViewController.swift */,
+				5727959A20C2E39B00E50BC0 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,7 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5769813420C20A44008FC1FC /* WinnersTableViewController.swift in Sources */,
+				5727959920C2E39200E50BC0 /* GamesTableViewCell.swift in Sources */,
 				5769813820C20C09008FC1FC /* WorldCup.swift in Sources */,
+				5727959720C2CD1400E50BC0 /* WorldCupTableViewCell.swift in Sources */,
 				5769811C20C1FF2C008FC1FC /* AppDelegate.swift in Sources */,
 				5769813620C20BAB008FC1FC /* WorldCupViewController.swift in Sources */,
 			);

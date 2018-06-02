@@ -35,14 +35,23 @@ class WinnersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "winner_cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "winner_cell", for: indexPath) as! WorldCupTableViewCell
         
         let worldCup = worldCups[indexPath.row]
-        cell.textLabel?.text = "Copa \(worldCup.year) - \(worldCup.country)"
-        cell.detailTextLabel?.text = "\(worldCup.winner) \(worldCup.winnerScore) x \(worldCup.viceScore) \(worldCup.vice)"
-        cell.imageView?.image = UIImage(named: worldCup.winner)
+        
+        cell.prepare(with: worldCup)
+//        cell.textLabel?.text = "Copa \(worldCup.year) - \(worldCup.country)"
+//        cell.detailTextLabel?.text = "\(worldCup.winner) \(worldCup.winnerScore) x \(worldCup.viceScore) \(worldCup.vice)"
+//        cell.imageView?.image = UIImage(named: worldCup.winner)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let vc = segue.destination as! WorldCupViewController
+        let worldCup = worldCups[tableView.indexPathForSelectedRow!.row]
+        vc.worldCup = worldCup
     }
 
     /*
@@ -84,10 +93,7 @@ class WinnersTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+    
     */
 
 }
